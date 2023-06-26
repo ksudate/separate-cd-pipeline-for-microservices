@@ -1,0 +1,14 @@
+name: Service A
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'kubernetes/service-a/**'
+      - 'terraform/service-a/**'
+
+jobs:
+  cd-pipeline:
+    uses: ./.github/workflows/cd-pipeline.yaml
+    with:
+      service: service-a

@@ -1,0 +1,15 @@
+name: CD Pipeline
+on:
+  workflow_call:
+    inputs:
+      service:
+        required: true
+        type: string
+
+jobs:
+  cd-pipeline:
+    #environment:
+    #  name: prd
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.service }}
