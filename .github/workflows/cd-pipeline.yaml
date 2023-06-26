@@ -8,8 +8,8 @@ on:
 
 jobs:
   cd-pipeline:
-    #environment:
-    #  name: prd
+    environment:
+      name: prd
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ inputs.service }}
